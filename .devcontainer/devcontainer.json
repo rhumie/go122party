@@ -26,6 +26,10 @@
       "settings": {
         "editor.formatOnSave": true,
         "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "eslint.workingDirectories": ["slidev"],
         "go.lintTool": "golangci-lint",
         "go.testTimeout": "3600s",
         "go.testFlags": ["-v"],
@@ -35,7 +39,13 @@
           "editor.defaultFormatter": "golang.go"
         }
       },
-      "extensions": ["golang.go", "esbenp.prettier-vscode", "antfu.slidev"]
+      "extensions": [
+        "golang.go",
+        "vue.volar",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "antfu.slidev"
+      ]
     }
   },
 
