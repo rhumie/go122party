@@ -49,8 +49,8 @@ The last comment block of each slide will be treated as slide notes. It will be 
 -->
 
 ---
-
-## transition: fade-out
+transition: fade-out
+---
 
 # What is Slidev?
 
@@ -91,8 +91,8 @@ Here is another comment.
 -->
 
 ---
-
-## layout: default
+layout: default
+---
 
 # Table of contents
 
@@ -103,10 +103,8 @@ Here is another comment.
 <Toc maxDepth="1"></Toc>
 
 ---
-
 transition: slide-up
 level: 2
-
 ---
 
 # Navigation
@@ -134,10 +132,8 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-
 layout: image-right
 image: https://cover.sli.dev
-
 ---
 
 # Code
@@ -191,8 +187,8 @@ Notes can also sync with clicks
 -->
 
 ---
-
-## level: 2
+level: 2
+---
 
 # Shiki Magic Move
 
@@ -309,8 +305,8 @@ Also, HTML elements are valid:
 -->
 
 ---
-
-## class: px-20
+class: px-20
+---
 
 # Themes
 
@@ -377,8 +373,8 @@ also allows you to add
 </div>
 
 ---
-
-## preload: false
+preload: false
+---
 
 # Motions
 
@@ -559,10 +555,8 @@ database "MySql" {
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
-
 src: ./pages/multiple-entries.md
 hide: false
-
 ---
 
 ---
@@ -592,10 +586,8 @@ console.log(Array.from({ length: 10 }, (_, i) => fibonacci(i + 1)));
 ```
 
 ---
-
 layout: center
 class: text-center
-
 ---
 
 # Learn More
