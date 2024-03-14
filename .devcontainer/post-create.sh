@@ -8,3 +8,6 @@ echo "alias \"ll=ls -l\"" >> ~/.bash_aliases
 # Dependencies
 npm install -g npm@latest;
 npm install --prefix ./slidev;
+
+# Playwright Dependencies
+npx playwright install-deps;
