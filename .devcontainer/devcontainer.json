@@ -37,6 +37,9 @@
         "go.toolsManagement.autoUpdate": true,
         "[go]": {
           "editor.defaultFormatter": "golang.go"
+        },
+        "files.associations": {
+          "*.go.snippet": "go"
         }
       },
       "extensions": [
