@@ -3,19 +3,10 @@
 ## \[問\] どちらのハンドラが呼ばれるでしょうか
 
 <div mt-4>
+
 <v-click at="1">
 
-Q1.`curl /posts/latest`<v-click at="2"> -> <span text-color-red>handlerB</span></v-click>
-
-```go
-http.Handle("GET /posts/{id}", handlerA)
-http.Handle("GET /posts/latest", handlerB)
-```
-
-</v-click>
-<v-click at="3">
-
-Q2.`curl /posts/latest`<v-click at="4"> -> <span text-color-red>判別できない!!!</span></v-click>
+`curl /posts/latest`<v-click at="2"> -> <span text-color-red>判別できない!!!</span></v-click>
 
 ```go
 http.Handle("GET /posts/{id}", handlerA)

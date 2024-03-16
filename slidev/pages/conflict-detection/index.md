@@ -15,7 +15,7 @@
 
 </div>
 
-<<< ./snippet/routing_index.go.snippet go {21-25}{maxHeight: '210px'}
+<<< ./snippet/routing_index.go.snippet go {1|21-25}{maxHeight: '210px'}
 
 <div text-2xs>
 
@@ -50,7 +50,7 @@ cf. https://github.com/golang/go/blob/go1.22.1/src/net/http/routing_index.go#L57
 
 </div>
 
-<<< ./snippet/routing_index.go.snippet go {26-32}{maxHeight: '210px'}
+<<< ./snippet/routing_index.go.snippet go {21-25|26-32}{maxHeight: '210px'}
 
 <div text-2xs>
 
@@ -92,7 +92,7 @@ cf. https://github.com/golang/go/blob/go1.22.1/src/net/http/routing_index.go#L57
 
 </div>
 
-<<< ./snippet/routing_index.go.snippet go {38-60}{maxHeight: '210px'}
+<<< ./snippet/routing_index.go.snippet go {26-32|38-60}{maxHeight: '210px'}
 
 <div text-2xs>
 
@@ -128,7 +128,7 @@ cf. https://github.com/golang/go/blob/go1.22.1/src/net/http/routing_index.go#L57
 
 </div>
 
-<<< ./snippet/routing_index.go.snippet go {62-66}{maxHeight: '210px'}
+<<< ./snippet/routing_index.go.snippet go {38-60|62-66}{maxHeight: '210px'}
 
 <div text-2xs>
 

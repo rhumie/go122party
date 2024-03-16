@@ -92,4 +92,4 @@ class: text-center
 
 # Thank You
 
-[Documentations]() · [GitHub]()
+[Documentations](https://rhumie.github.io/go122party/) · [GitHub](https://github.com/rhumie/go122party/)

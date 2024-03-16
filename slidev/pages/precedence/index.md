@@ -1,3 +1,5 @@
+<!--
+
 # 優先順位（1/2）
 
 ## "Longest Wins"から<span text-color-red>"Most Specific Wins"</span>へ
@@ -6,25 +8,21 @@
 
 - 以前のServeMuxにおいては,単純にパターン文字列の長い方が優先（Longest Wins）されていた
 
-- Go1.22では,ワイルドカードの導入により単純なLongest Winよりも優れたルールが必要となった  
+- Go1.22では,ワイルドカードの導入により単純なLongest Winよりも優れたルールが必要となった
   <span text-sm>例. Longest Winsのままだと`/posts/latest` よりも `/posts/{identifier}` が常に優先されてしまう</span>
 
 - どちらのパターンにもマッチする場合は,より具体的に（厳密に）マッチしているパターンを優先する形となった（Most Specific Wins）
 
 </div>
 
-<!--
-登録順序や
-互換性は維持したまま進化
 -->
 
----
+# 優先順位と競合
 
-# 優先順位（2/2）
+<div>必ずしも重複するパターンが競合するとは限らない（Most Specific Wins）<br />競合するのは「Overlapping」と「Equivalent」の関係性</div>
 
-<div>パターンの関係性は5つに分類できる</div>
-
-<table mt-4>
+<div text-sm paragraph-m-0 mt-4>パターンの関係性は5つに分類できる</div>
+<table>
   <tr></tr>
   <tr>
     <th>Disjoint</th>
@@ -82,8 +80,6 @@
     <td text-color-red text-sm>競合する</td>
   </tr>
 </table>
-
-競合するのは「Overlapping」と「Equivalent」の関係性
 
 <style>
   table {
