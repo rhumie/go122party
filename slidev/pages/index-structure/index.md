@@ -15,7 +15,7 @@
 - P1: `/posts/{id}`
 - P2: `/posts/latest`
 - P3: `/posts/`
-- P4: `/posts/{$}`
+- P4: `/posts/latest/{$}`
 
 </div>
 
@@ -42,7 +42,7 @@ type routingIndexKey struct {
 </div>
 
 <div h-full overflow-hidden>
-<img alt="index" src="https://lh3.googleusercontent.com/d/1L3oTlzCvLG2egZIye_iPbtSAzR5erplW" mx-auto object-contain h-full w-full />
+<img alt="index" src="https://lh3.googleusercontent.com/d/1uMxM-co-ipPgK8eKdmpcbZw8JwxJwSu-" mx-auto object-contain h-full w-full />
 </div>
 
 </div>

@@ -4,12 +4,12 @@
 
 <div mt-4>
 
-- 以前のServeMuxにおいては,単純にパターン文字列の長い方が優先(Longest Wins)されていた
+- 以前のServeMuxにおいては,単純にパターン文字列の長い方が優先（Longest Wins）されていた
 
 - Go1.22では,ワイルドカードの導入により単純なLongest Winよりも優れたルールが必要となった  
-  <span text-sm>例. Longest Winsでは`/posts/latest` よりも `/posts/{identifier}` が優先され得る</span>
+  <span text-sm>例. Longest Winsのままだと`/posts/latest` よりも `/posts/{identifier}` が常に優先されてしまう</span>
 
-- 結果的により具体的に（厳密に）マッチしているパターンを優先する形となった(Most Specific Wins)
+- どちらのパターンにもマッチする場合は,より具体的に（厳密に）マッチしているパターンを優先する形となった（Most Specific Wins）
 
 </div>
 
@@ -22,9 +22,9 @@
 
 # 優先順位（2/2）
 
-## パターンの関係性は5つに分類できる
+<div>パターンの関係性は5つに分類できる</div>
 
-<table mt-8>
+<table mt-4>
   <tr></tr>
   <tr>
     <th>Disjoint</th>
@@ -33,22 +33,31 @@
       <div>P1とP2の両方にマッチすることはない（互いに素）</div>
       <div text-xs>例. P1:<code>/posts</code> P2:<code>/users</code></div>
     </td>
+    <td text-sm>競合しない</td>
   </tr>
   <tr>
     <th>P1 More Specific</th>
     <td><img width="120" src="/img/venn-p1-more-specific.png" /></td>
     <td text-sm>
-      <div>P1にマッチするものはP2にもマッチするが,その逆は必ずしもそうではない</div>
-      <div text-xs>例. P1:<code>/posts/{id}</code> P2:<code>/posts/</code></div>
+      <div>
+        P1にマッチするものはP2にもマッチするが,その逆は必ずしもそうではない<br />
+        <span text-color-red>-> 両方にマッチする場合はP1を優先</span>
+      </div>
+      <div text-xs>例. P1:<code>/posts/latest</code> P2:<code>/posts/{id}</code></div>
     </td>
+    <td text-sm>競合しない</td>
   </tr>
   <tr>
     <th>P1 More General</th>
     <td><img width="120" src="/img/venn-p1-more-general.png" /></td>
     <td text-sm>
-      <div>P2にマッチするものはP2にもマッチするが,その逆は必ずしもそうではない</div>
+      <div>
+        P2にマッチするものはP2にもマッチするが,その逆は必ずしもそうではない<br />
+        <span text-color-red>-> 両方にマッチする場合はP2を優先</span>
+      </div>
       <div text-xs>例. P1:<code>/posts/{id...}</code> P2:<code>/posts/{id}/users/{uid}</code></div>
     </td>
+    <td text-sm>競合しない</td>
   </tr>
   <tr border-color-orange>
     <th>Overlapping</th>
@@ -56,11 +65,12 @@
     <td text-sm>
       <div>P1とP2両方にマッチするものもあれば片方にしかマッチしないものもある</div>
       <div text-xs>
-        例. P1:<code>/posts/{id}</code> P2:<code>/{resource}/latest</code><br />
-        　・<code>/post/latest</code>の場合は両方にマッチ<br />
-        　・<code>/post/1234</code>場合はP1のみ, <code>/users/123</code>の場合はP2のみにマッチ
+        例. P1:<code>/posts/{id}</code> P2:<code>/{resource}/latest</code>
+        <div>　・<code>/post/latest</code>の場合は両方にマッチ</div>
+        <div>　・<code>/post/1234</code>場合はP1のみ, <code>/users/latest</code>の場合はP2のみにマッチ</div>
       </div>
     </td>
+    <td text-color-red text-sm>競合する</td>
   </tr>
   <tr>
     <th>Equivalent</th>
@@ -69,8 +79,11 @@
       <div>必ずP1とP2の両方にマッチする</div>
       <div text-xs>例. P1:<code>/posts/{id}</code> P2:<code>/posts/{name}</code></div>
     </td>
+    <td text-color-red text-sm>競合する</td>
   </tr>
 </table>
+
+競合するのは「Overlapping」と「Equivalent」の関係性
 
 <style>
   table {

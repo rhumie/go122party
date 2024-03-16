@@ -2,6 +2,12 @@
 
 > <span text-color-red>Registration time is potentially more of an issue.</span> With the precedence rules described here, checking a new pattern for conflicts seems to require looking at all existing patterns in the worst case. (Algorithm lovers, you are hereby nerd-sniped.) That means registering n patterns takes O(n2) time in the worst case.
 
+<div text-xs class="paragraph-m-0">
+
+cf. https://github.com/golang/go/discussions/60227#discussioncomment-6204048
+
+</div>
+
 - 単純に考えるとパターン登録のたびに,登録済みの全パターンと競合をチェックする必要がある  
   = 最悪の場合,計算量は$O(N^2)$となる
 

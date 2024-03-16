@@ -4,7 +4,7 @@
 
 Future Architect, Inc.  
 Technology Innovation Group  
-Software Architect
+Software Architect & Tech Lead
 
 <div text-xs>
 

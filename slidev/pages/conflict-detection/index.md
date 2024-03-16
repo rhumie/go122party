@@ -46,7 +46,7 @@ cf. https://github.com/golang/go/blob/go1.22.1/src/net/http/routing_index.go#L57
 
 例. `GET /posts/oldest/{$}` を登録する場合
 
--> <span text-color-red font-bold>1番目にドル（`/`）を持つパターン（P4）</span>と競合チェックを行う
+-> <span text-color-red font-bold>2番目にドル（`/`）を持つパターン（P4）</span>と競合チェックを行う
 
 </div>
 

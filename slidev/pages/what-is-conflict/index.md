@@ -8,24 +8,14 @@
 Q1.`curl /posts/latest`<v-click at="2"> -> <span text-color-red>handlerB</span></v-click>
 
 ```go
-http.Handle("GET /posts", handlerA)
-http.Handle("GET /posts/{id}", handlerB)
-```
-
-</v-click>
-<v-click at="3">
-
-Q2.`curl /posts/latest`<v-click at="4"> -> <span text-color-red>handlerB</span></v-click>
-
-```go
 http.Handle("GET /posts/{id}", handlerA)
 http.Handle("GET /posts/latest", handlerB)
 ```
 
 </v-click>
-<v-click at="5">
+<v-click at="3">
 
-Q3.`curl /posts/latest`<v-click at="6"> -> <span text-color-red>判別できない!!!</span></v-click>
+Q2.`curl /posts/latest`<v-click at="4"> -> <span text-color-red>判別できない!!!</span></v-click>
 
 ```go
 http.Handle("GET /posts/{id}", handlerA)
