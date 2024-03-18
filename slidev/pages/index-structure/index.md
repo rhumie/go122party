@@ -15,7 +15,7 @@
 - P1: `/posts/{id}`
 - P2: `/posts/latest`
 - P3: `/posts/`
-- P4: `/posts/latest/{$}`
+- P4: `/posts/{$}`
 
 </div>
 

@@ -4,16 +4,13 @@
 
 <div mt-4>
 
-<v-click at="1">
-
-`curl /posts/latest`<v-click at="2"> -> <span text-color-red>判別できない!!!</span></v-click>
-
 ```go
 http.Handle("GET /posts/{id}", handlerA)
 http.Handle("GET /{resource}/latest", handlerB)
 ```
 
-</v-click>
+`curl /posts/latest` -> <v-click at="1"><span text-color-red>判別できない!!!</span></v-click>
+
 </div>
 
 ---
@@ -36,7 +33,7 @@ GET /posts/{id} matches "/posts/id", but GET /{resource}/latest doesn't.
 <div class="abs-br m-6">
 <v-click>
 
-では,具体的に競合する条件とは? >>>
+では,どういうパターンの組み合わせが「競合」となるのか？ >>>
 
 </v-click>
 </div>

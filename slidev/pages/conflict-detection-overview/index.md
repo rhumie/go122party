@@ -7,7 +7,7 @@
 <div grid="~ cols-2 gap-4" h-full overflow-hidden>
 <div text-sm h-full overflow-hidden class="paragraph-m-0">
 
-```go {all|2737|2748-2751|2762-2774|2775}{maxHeight:'327px',lines:true,startLine:2737}
+```go {2737|2748-2751|2764-2766,2770-2774|2776}{maxHeight:'327px',lines:true,startLine:2737}
 func (mux *ServeMux) registerErr(patstr string, handler Handler) error {
 	if patstr == "" {
 		return errors.New("http: invalid pattern")

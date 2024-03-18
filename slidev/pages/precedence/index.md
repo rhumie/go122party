@@ -19,7 +19,7 @@
 
 # 優先順位と競合
 
-<div>必ずしも重複するパターンが競合するとは限らない（Most Specific Wins）<br />競合するのは「Overlapping」と「Equivalent」の関係性</div>
+<div>競合するのは「Overlapping」と「Equivalent」の関係性<br />必ずしも重複するパターンが競合するとは限らない（Most Specific Wins）</div>
 
 <div text-sm paragraph-m-0 mt-4>パターンの関係性は5つに分類できる</div>
 <table>
